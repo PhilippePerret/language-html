@@ -296,7 +296,7 @@
     'body': '<source src="${1:http://}" type="${2:mimetype}">$0'
   'Span':
     'prefix': 'span'
-    'body': '<span>$1</span>$0'
+    'body': '<span${1: class="${2}"}>$3</span>$0'
   'Strong':
     'prefix': 'strong'
     'body': '<strong>$1</strong>$0'
