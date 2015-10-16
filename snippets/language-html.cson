@@ -8,23 +8,23 @@
     'body': '<abbr title="$1">$2</abbr>$0'
   'Address':
     'prefix': 'address'
-    'body': '<address ${1:class="$2"}>\n\t$3\n</address>'
+    'body': '<address${1: class="$2"}>\n\t$3\n</address>'
   'Area':
     'prefix': 'area'
     'body': '<area ${1:shape="${2:default}"} coords="$3" ${4:href="${5:#}"} />$0'
   'Article':
     'prefix': 'article'
-    'body': '<article class="$1">\n\t$2\n</article>'
+    'body': '<article${1: id="$2"}${3: class="$4"}>\n\t$0\n</article>'
   'Aside':
     'prefix': 'aside'
-    'body': '<aside class="$1">\n\t$2\n</aside>'
+    'body': '<aside${1: id="$2"}${3: class="$4"}>\n\t$0\n</aside>'
   'Audio':
     'prefix': 'audio'
-    'body': '<audio src="$1">\n\t$2\n</audio>'
+    'body': '<audio${1: id="$2"}${3: class="$4"}src="$5">\n\t$0\n</audio>'
   # B
   'Body':
     'prefix': 'body'
-    'body': '<body>\n\t$1\n</body>'
+    'body': '<body${1: id="$2"}${3: class="$4"}>\n\t$0\n</body>'
   'Bold':
     'prefix': 'b'
     'body': '<b>$1</b>$0'
@@ -80,7 +80,7 @@
     'body': '<data value="$1">$2</data>$0'
   'Data List':
     'prefix': 'datalist'
-    'body': '<datalist class="$1">\n\t$2\n</datalist>'
+    'body': '<datalist${1: id="$2"}${3: class="$4"}>\n\t$0\n</datalist>'
   'Description':
     'prefix': 'dd'
     'body': '<dd>$1</dd>$0'
@@ -89,19 +89,19 @@
     'body': '<del>$1</del>$0'
   'Details':
     'prefix': 'details'
-    'body': '<details ${1:open}>$2</details>$0'
+    'body': '<details${1: open}>$2</details>$0'
   'Definition':
     'prefix': 'dfn'
     'body': '<dfn>$1</dfn>$0'
   'Description List':
     'prefix': 'dl'
-    'body': '<dl class="$1">\n\t$2\n</dl>'
+    'body': '<dl${1: id="$2"}${3: class="$4"}>\n\t$0\n</dl>'
   'Definition Term':
     'prefix': 'dt'
     'body': '<dt>$1</dt>$0'
   'Div':
     'prefix': 'div'
-    'body': '<div class="$2">\n\t$3\n</div>'
+    'body': '<div${1: id="$2"}${3: class="$4"}>\n\t$0\n</div>'
   # E
   'Emphasis':
     'prefix': 'em'
@@ -124,7 +124,7 @@
     'body': '<footer>$1</footer>$0'
   'Form':
     'prefix': 'form'
-    'body': '<form class="$1" action="${2:index.html}" method="${3:post}">\n\t$4\n</form>'
+    'body': '<form${1: id="$2"}${3: class="$4"} action="${5:index.html}" method="${6:post}">\n\t$0\n</form>'
   # G
   # H
   'Heading 1':
@@ -169,7 +169,7 @@
     'body': '<input type="${1:button}" name="${2:name}" value="$3">$0'
   'Image':
     'prefix': 'img'
-    'body': '<img src="$1" alt="$2" />$0'
+    'body': '<img src="$1" alt="$2"${1: id="$2"}${3: class="$4"} />$0'
   'Inserted Text':
     'prefix': 'ins'
     'body': '<ins>$1</ins>$0'
@@ -232,7 +232,7 @@
     'body': '<object data="${1:http://}" type="${2:mimetype}">$3</object>$0'
   'Ordered List':
     'prefix': 'ol'
-    'body': '<ol>\n\t$1\n</ol>'
+    'body': '<ol${1: id="$2"}${3: class="$4"}>\n\t$0\n</ol>'
   'Option Group':
     'prefix': 'optgroup'
     'body': '<optgroup label="${1:Group 1}">\n\t$2\n</optgroup>'
@@ -245,7 +245,7 @@
   # P
   'Paragraph':
     'prefix': 'p'
-    'body': '<p>\n\t$1\n</p>'
+    'body': '<p${1: id="$2"}${3: class="$4"}>\n\t$0\n</p>'
   'Parameter':
     'prefix': 'param'
     'body': '<param name="${1:foo}" value="${2:bar}">$0'
@@ -284,10 +284,10 @@
     'body': '<script src="$1" charset="${2:utf-8}"></script>$0'
   'Section':
     'prefix': 'section'
-    'body': '<section>\n\t$1\n</section>'
+    'body': '<section${1: id="$2"}${3: class="$4"}>\n\t$0\n</section>'
   'Select':
     'prefix': 'select'
-    'body': '<select class="$1" name="$2">\n\t$3\n</select>'
+    'body': '<select${1: id="$2"}${3: class="$4"} name="$5">\n\t$0\n</select>'
   'Small':
     'prefix': 'small'
     'body': '<small>$1</small>$0'
@@ -315,7 +315,7 @@
   # T
   'Table':
     'prefix': 'table'
-    'body': '<table>\n\t$1\n</table>'
+    'body': '<table${1: id="$2"}${3: class="$4"}>\n\t$0\n</table>'
   'Table Body':
     'prefix': 'tbody'
     'body': '<tbody>\n\t$1\n</tbody>'
@@ -327,7 +327,7 @@
     'body': '<template id="$1">\n\t$2\n</template>'
   'Text Area':
     'prefix': 'textarea'
-    'body': '<textarea name="${1:name}" rows="${2:8}" cols="${3:40}">$4</textarea>$0'
+    'body': '<textarea${1: id="$2"}${3: class="$4"} name="${5:name}" rows="${6:8}" cols="${7:40}">$8</textarea>$0'
   'Table Foot':
     'prefix': 'tfoot'
     'body': '<tfoot>\n\t$1\n</tfoot>'
@@ -355,7 +355,7 @@
     'body': '<u>$1</u>$0'
   'Unordered List':
     'prefix': 'ul'
-    'body': '<ul>\n\t$1\n</ul>'
+    'body': '<ul${1: id="$2"}${3: class="$4"}>\n\t$0\n</ul>'
   # V
   'Variable':
     'prefix': 'var'
